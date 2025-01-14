@@ -1,4 +1,5 @@
 import { Header } from "./components/header";
+import { Aluno } from "./components/aluno"
 
 export default function App() {
   return (
@@ -10,16 +11,3 @@ export default function App() {
   )
 }
 
-interface IAlunoProps {
-  nome: string;
-  idade: number;
-}
-
-function Aluno({nome, idade}: IAlunoProps) {
-  return (
-    <div>
-      <h2>Aluno: {nome}</h2>
-      <p>Idade: {idade}</p>
-    </div>
-  )
-}
