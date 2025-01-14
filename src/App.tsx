@@ -2,13 +2,22 @@ export default function App() {
   return (
     <div>
       <h1>Meu projeto</h1>
-      <Aluno/>
+      <Aluno nome="Yan Graim" idade={27}/>
+      <Aluno nome="Wanessa Niederauer" idade={24}/>
     </div>
   )
 }
 
-function Aluno() {
+interface IAlunoProps {
+  nome: string;
+  idade: number;
+}
+
+function Aluno({nome, idade}: IAlunoProps) {
   return (
-    <h1>Aluno: Yan Graim</h1>
+    <div>
+      <h2>Aluno: {nome}</h2>
+      <p>Idade: {idade}</p>
+    </div>
   )
 }
