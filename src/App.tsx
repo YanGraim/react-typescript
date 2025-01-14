@@ -1,7 +1,9 @@
+import { Header } from "./components/header";
+
 export default function App() {
   return (
     <div>
-      <h1>Meu projeto</h1>
+      <Header/>
       <Aluno nome="Yan Graim" idade={27}/>
       <Aluno nome="Wanessa Niederauer" idade={24}/>
     </div>
