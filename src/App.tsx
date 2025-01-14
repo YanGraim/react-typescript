@@ -12,6 +12,20 @@ export default function App() {
 
   const [infoAluno, setInfoAluno] = useState<InfoAlunoProps>();
 
+  const [contador, setContador] = useState(0);
+
+  function adicionar() {
+    setContador(valorAtual => valorAtual +1)
+  }
+
+  function diminuir() {
+    if(contador === 0) {
+      return;
+    }
+
+    setContador(valorAtual => valorAtual -1)
+  }
+
   function mostrarAluno() {
     setInfoAluno({
       nome: input,
@@ -44,6 +58,14 @@ export default function App() {
       <hr />
       <h3>Bem vindo: {infoAluno?.nome}</h3>
       <h4>Idade: {infoAluno?.idade}</h4>
+
+      <hr />
+
+      <br />
+
+      <h1>Contador com useState</h1>
+
+      <button onClick={adicionar}>+</button> {contador} <button onClick={diminuir}>-</button>
     </div>
   )
 }
